@@ -7,7 +7,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <p>
-            K-digital 6기 김우정입니다.
+            K-digital 6기 김우정입니다??
           </p>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
