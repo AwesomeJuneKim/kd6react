@@ -10,9 +10,11 @@ function App() {
         <MainHeader />
         {/* <MainHeader />
         <MainHeader /> */}
+      <Hello />
+      <Hello />
+      <Hello />
       </div>
-      <Hello />
-      <Hello />
+
     </>
   );
 }
