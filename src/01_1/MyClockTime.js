@@ -1,9 +1,10 @@
 function MyClockTime(){
     const currentTime=new Date();
     return (
-        <p>
+        <h1>
+            현재시각: 
             {currentTime.toLocaleTimeString()}
-        </p>
+        </h1>
     );
 }
 export default MyClockTime;

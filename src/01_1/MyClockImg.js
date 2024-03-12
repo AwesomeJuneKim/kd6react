@@ -1,7 +1,10 @@
-import logo from '../logo.svg';
+import logo from './colock.png';
 function MyClockImg(){
     return (
-        <img src={logo} className="App-logo" alt="logo" />
+        <div style={{margin:"10px"}}>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <img src={logo} alt="logo" />
+        </div>
     );
 }
 export default MyClockImg
