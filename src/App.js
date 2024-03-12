@@ -1,20 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import MainHeader from './01/MainHeader';
 
 function App() {
   return (
     <>
       <div className="App">
-        <header className="App-header">
-          <p>
-            K-digital 6기 김우정
-          </p>
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
+        <MainHeader />
       </div>
       <div>402호</div>
     </>
   );
 }
+
 
 export default App;
