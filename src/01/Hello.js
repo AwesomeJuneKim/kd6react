@@ -5,11 +5,15 @@ function Hello(){
         backgroundColor:"darkgreen",
         color:"white"
     }
+    let s='';
+    if(n%2==0)s="짝수";
+    else s="홀수";
+
     return(
         <h1>
             <span style={st1}>Hello</span>
             <span style={{display:"inline-flex", margin:"10px"}}>{n}</span>
-            짝수 홀수
+            {s}
         </h1>
     );
 }
