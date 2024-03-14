@@ -28,7 +28,7 @@ function App() {
                           text-xl font-bold text-white
                           bg-[#6ABEA7]">
           <div>리액트 실습</div>
-          <div className='text-3xl text-[#F87666]'><ImAppleinc /></div>
+          <div className='text-5xl text-green-950'><ImAppleinc /></div>
           </header>
         <main className="grow">
           <HelloCss />
