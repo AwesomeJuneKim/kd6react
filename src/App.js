@@ -1,8 +1,9 @@
 
-import './App.css';
-import MainHeader from './01/MainHeader';
+// import './App.css';
+// import MainHeader from './01/MainHeader';
 // import Hello from './01/Hello';
-import MyClock from './01_1/MyClock';
+// import MyClock from './01_1/MyClock';
+import HelloCss from './02/HelloCss';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <Hello />
       <Hello />
       <Hello /> */}
-      <MyClock />
+      {/* <MyClock /> */}
+      <HelloCss />
       </div>
 
     </>
