@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+.ch1{
+    color: cyan;
+}
+.imgLogo{
+    width: 200px;
+    height: 200px;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .imgLogo{
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
