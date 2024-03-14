@@ -4,6 +4,7 @@
 // import Hello from './01/Hello';
 // import MyClock from './01_1/MyClock';
 import HelloCss from './02/HelloCss';
+import { ImAppleinc } from "react-icons/im";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
                           text-xl font-bold text-white
                           bg-[#6ABEA7]">
           <div>리액트 실습</div>
-          <div>홈</div>
+          <div className='text-3xl text-[#F87666]'><ImAppleinc /></div>
           </header>
         <main className="grow">
           <HelloCss />
