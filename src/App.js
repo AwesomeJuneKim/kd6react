@@ -28,7 +28,8 @@ function App() {
                           h-20
                           p-10
                           text-xl font-bold text-white
-                          bg-[#6ABEA7]">
+                          bg-[#6ABEA7]
+                          scroll-auto">
           <div>리액트 실습</div>
           <div className='text-5xl text-green-950'><ImAppleinc /></div>
           </header>
