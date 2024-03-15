@@ -5,7 +5,7 @@
 // import MyClock from './01_1/MyClock';
 // import HelloCss from './02/HelloCss';
 import { ImAppleinc } from "react-icons/im";
-import MyDiv1 from "./03/MyDiv1";
+import MyDiv1 from "./03_1/MyDiv1";
 
 function App() {
   return (
