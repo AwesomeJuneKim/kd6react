@@ -6,6 +6,7 @@
 // import HelloCss from './02/HelloCss';
 import { ImAppleinc } from "react-icons/im";
 import MyDiv1 from "./03_1/MyDiv1";
+import MyListMain from"./04/MyListMain";
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
           </header>
         <main className="grow flex flex-col justify-center items-center">
           {/* <HelloCss /> */}
-          <MyDiv1 />
+          {/* <MyDiv1 /> */}
+          <MyListMain />
           </main>
         <footer className="flex justify-center items-center
                           h-20
