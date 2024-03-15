@@ -4,8 +4,8 @@ export default function MyList({title, imgUrl, content}) {
   return (
     <div className="flex flex-row border-2 rounded border-gray-500
                     w-full">
-      <div className=" max-w-48">
-        <img src={imgUrl} alt="html" />
+      <div className="w-1/3 max-w-48">
+        <img src={imgUrl} alt={title} />
       </div>
       <div className="w-3/4 h-auto">
         <h1 className="font-bold pl-3">{title}</h1>

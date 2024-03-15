@@ -9,7 +9,7 @@ export default function MyListMain() {
         key={item.title}/>
         );
   return (
-    <div className='w-10/12 grid grid-cols-4 gap-4 md:grid-cols-2'>
+    <div className='w-11/12 grid grid-cols-4 gap-4 md:grid-cols-2'>
         {myItems}
     </div>
   )
