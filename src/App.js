@@ -3,8 +3,9 @@
 // import MainHeader from './01/MainHeader';
 // import Hello from './01/Hello';
 // import MyClock from './01_1/MyClock';
-import HelloCss from './02/HelloCss';
+// import HelloCss from './02/HelloCss';
 import { ImAppleinc } from "react-icons/im";
+import MyDiv1 from "./03/MyDiv1";
 
 function App() {
   return (
@@ -30,8 +31,9 @@ function App() {
           <div>리액트 실습</div>
           <div className='text-5xl text-green-950'><ImAppleinc /></div>
           </header>
-        <main className="grow">
-          <HelloCss />
+        <main className="grow flex flex-col justify-center items-center">
+          {/* <HelloCss /> */}
+          <MyDiv1 />
           </main>
         <footer className="flex justify-center items-center
                           h-20
@@ -40,6 +42,7 @@ function App() {
                           bg-[#5E6973]">
           ⓒ 2024 kimujeong. All right reserved.
           </footer>
+          
       </div>
 
     </>
