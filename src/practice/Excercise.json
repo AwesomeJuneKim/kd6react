@@ -1,0 +1,22 @@
+[
+  { "title" : "Bicycle",
+    "imgUrl" : "./img/bicycle.png", 
+    "content": "A bicycle, also called a pedal cycle, bike, push-bike or cycle, is a human-powered or motor-assisted, pedal-driven, single-track vehicle, with two wheels attached to a frame, one behind the other."
+  },
+  { "title" : "Skateboard", 
+    "imgUrl" : "./img/skateboard.png", 
+    "content":"A skateboard is a type of sports equipment used for skateboarding. It is usually made of a specially designed 7–8-ply maple plywood deck and has polyurethane wheels attached to the underside by a pair of skateboarding trucks."
+  },
+  { "title" : "Swimming",
+    "imgUrl" : "./img/swim.png", 
+    "content": "Swimming is a popular recreational activity and competitive sport that involves moving through water using various techniques. It offers numerous health benefits and is suitable for people of all ages and fitness levels."
+  },
+  { "title" : "Boxing" ,
+    "imgUrl" : "./img/box.png",
+    "content": "Boxing is a combat sport and a martial art[1] in which two people, usually wearing protective gloves and other protective equipment such as hand wraps and mouthguards, throw punches at each other for a predetermined amount of time in a boxing ring."
+  },
+  { "title" : "Yoga" ,
+    "imgUrl" : "./img/yoga.png",
+    "content": "Yoga is a group of physical, mental, and spiritual practices or disciplines which originated in ancient India and aim to control (yoke) and still the mind, recognizing a detached witness-consciousness untouched by the mind and mundane suffering. "
+  }
+]

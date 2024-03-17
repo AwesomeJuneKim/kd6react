@@ -10,10 +10,10 @@ export default function MyList({title, imgUrl, content}) {
       <div className="w-3/4 h-auto">
         <h1 className="font-bold pl-3">{title}</h1>
         <p className="pl-3">{content}</p>
-        <div className="w-full flex justify-end mt-5 pr-3
-                        text-red-700 items-baseline"><FaHeart/>
-                        <span className="text-black font-bold">좋아요</span></div>
-      </div>
+        </div>
+      <div className="w-full flex justify-end mt-5 pr-3
+                    text-red-700 items-baseline"><FaHeart/>
+                    <span className="text-black font-bold">좋아요</span></div>
     </div>
   )
 }
