@@ -1,11 +1,17 @@
 import { FaHeart } from "react-icons/fa";
+import { useState } from "react";
 
 export default function MyList({title, imgUrl, content}) {
   let cnt=0;
+
+  //state변수 생성 대괄호로 만들어야 함 변수명은 아무거나 setStCnt는 변수를 바꾸는 함수명
+  const[stCnt, setStCnt]=useState(0);//컴포넌트의 초기값 0으로 초기화
+
   const handleLike=(t)=>{
     console.log('handleLike'+t)
     cnt=cnt+1;
     console.log(`cnt=${cnt}`)
+    setStCnt(stCnt+1);
   }
   return (
     <div className="flex flex-row border-2 rounded border-gray-500
@@ -23,7 +29,7 @@ export default function MyList({title, imgUrl, content}) {
                         items-baseline" onClick={()=>{handleLike(title)}}>
                         <FaHeart className=" text-red-700 hover:text-black"/>
                         <span className="font-bold">좋아요</span>
-                        <span>{cnt}</span>
+                        <span>{stCnt}</span>
         </div>
       </div>
     </div>
