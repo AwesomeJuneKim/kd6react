@@ -1,19 +1,12 @@
-import BoxOfficeData from './BoxOffice.json'
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import { CgLoadbar } from "react-icons/cg";
-import { useState } from 'react';
 
 
-
-
-export default function BoxOfficeTb() {
-    const [Mcontent,setMcontent]= useState();
-
+export default function BoxOfficeTbody({boxlist, setMcontent}) {
     const handleClick=(mv)=>{
         console.log(mv)
         setMcontent(mv)
     }
-    const boxlist=BoxOfficeData.boxOfficeResult.dailyBoxOfficeList
     const myBoxList=boxlist.map(item=>(
         <tr key={item.movieNm} className='h-10 p-1 hover:bg-slate-100 hover:font-bold'
         onClick={()=>{handleClick(item)}}>
@@ -28,28 +21,9 @@ export default function BoxOfficeTb() {
                                                 </td>
         </tr>
     ));
-  return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <table className="w-4/5 border">
-        <thead>
-            <tr className='h-10 text-center bg-blue-200 text-blue-950
-                            font-bold'>
-                <td className='w-10'>순위</td>
-                <td>영화명</td>
-                <td>매출액</td>
-                <td className='w-1/5'>관객수</td>
-                <td className='w-20'>증감율</td>
-            </tr>
-        </thead>
-        <tbody>
-            {myBoxList}
-        </tbody>
-      </table>
-        <div className='w-4/5 bg-blue-500 h-10 text-center text-white p-2'>
-            {Mcontent === undefined &&'영화를 선택해 주세요.'}
-            {Mcontent &&
-            `[ ${Mcontent.rank}위 ] ${Mcontent.movieNm} :
-            누적관객수: ${parseInt(Mcontent.audiCnt).toLocaleString()}명`}</div>
-    </div>
+    return (
+    <tbody>
+        {myBoxList}
+    </tbody>
   )
 }

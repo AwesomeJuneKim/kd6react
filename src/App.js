@@ -8,7 +8,7 @@ import { ImAppleinc } from "react-icons/im";
 // import MyDiv1 from "./03_1/MyDiv1";
 // import MyListMain from"./04/MyListMain";
 // import Practice1 from "./practice/Practice1";
-import BoxOfficeTb from "./05/BoxOfficeTb";
+import BoxOfficeTb from "./05_1/BoxOfficeTb";
 // import BoxOfficeMain from "./05/BoxOfficeMain";
 
 function App() {
