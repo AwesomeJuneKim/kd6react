@@ -13,9 +13,10 @@ export default function Lotto() {
         let n=Math.floor(Math.random()*45)+1
         if(!lottoNum.includes(n)) lottoNum.push(n)
     }
-lottoNum.splice(6,0,<span className="text-black text-4xl font-bold">+</span>);
-const ballNum=lottoNum.map((n,i)=>(
-    <TailBall key={i} n={n}/>));
+    lottoNum.splice(6,0,<span className="text-black text-4xl font-bold">+</span>);
+    const ballNum=lottoNum.map((n,i)=>(
+      <TailBall key={i} n={n}/>
+    ));
     
     const[mNb, setmNb]=useState();
   return (
