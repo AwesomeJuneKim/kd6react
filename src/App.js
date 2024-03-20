@@ -10,7 +10,8 @@ import { ImAppleinc } from "react-icons/im";
 // import Practice1 from "./practice/Practice1";
 // import BoxOfficeTb from "./05_1/BoxOfficeTb";
 // import BoxOfficeMain from "./05/BoxOfficeMain";
-import Lotto from "./06/Lotto";
+import Like from "./practice/Like";
+// import Lotto from "./06/Lotto";
 
 function App() {
   return (
@@ -44,7 +45,8 @@ function App() {
           {/* <Practice1 /> */}
           {/* <BoxOfficeTb /> */}
           {/* <BoxOfficeMain/> */}
-          <Lotto />
+          {/* <Lotto /> */}
+          <Like />
           </main>
         <footer className="flex justify-center items-center
                           h-20
