@@ -13,6 +13,7 @@ import { ImAppleinc } from "react-icons/im";
 // import Like from "./practice/Like";
 // import Lotto from "./06/Lotto";
 // import FoodCard from "./07/FoodCard";
+import MyClock from "./08/MyClock";
 import FoodMain from "./07/FoodMain";
 
 function App() {
@@ -50,7 +51,8 @@ function App() {
           {/* <Lotto /> */}
           {/* <Like /> */}
           {/* <FoodCard /> */}
-          <FoodMain/>
+          {/* <FoodMain/> */}
+          <MyClock />
           </main>
         <footer className="flex justify-center items-center
                           h-20
