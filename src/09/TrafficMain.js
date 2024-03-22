@@ -43,6 +43,7 @@ export default function TrafficMain() {
     let data=Tdata.filter(item=>item.사고유형_대분류===selC1).map(item=>item['사고유형_중분류'])
     //이미 대분류에서 리스트가 되었으므로 다시 중복제거 및 리스트로 만들 필요가 없다.
       console.log(data)
+      setInfo(' ');
       setC2(data);
   },[selC1]);
   useEffect(()=>{
