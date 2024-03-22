@@ -31,6 +31,7 @@ export default function TrafficMain() {
     console.log("Tdata:",Tdata)
     let data=Tdata.map(item=>item['사고유형_대분류'])//빈칸이 없으므로 .연산자 사용가능
       data=new Set(data);
+      console.log("여기다여기",data)
       data=[...data];
       console.log(data)
       setC1(data);
