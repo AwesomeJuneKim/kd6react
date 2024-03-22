@@ -4,7 +4,7 @@ export default function TrafficNav({title, category, sel, setSel}) {
         setSel(item);
     }
     const bts=category.map(item=>
-        <TailButton caption={item} color="blue" handleClick={()=>handleBtClick(item)}/>
+        <TailButton key={item} caption={item} color={item===sel? "red":"blue"} handleClick={()=>handleBtClick(item)}/>
         );
   return (
     <div className="w-11/12 flex justify-between items-center">
