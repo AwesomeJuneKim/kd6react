@@ -14,7 +14,12 @@ export default function RefVal() {
         setStCnt(stCnt+1);
         console.log('stCnt1=',stCnt);//1+ 는 버튼을 1번누르면 0로 표시되며(초기값이 0이므로) 세터와 동기화되지 않음
     }
-    const handleRef=()=>{}
+    const handleRef=()=>{
+        refCnt.current=refCnt.current+1;
+        console.log('refCnt.current=',refCnt.current); 
+        //2+바로 렌더링되는게 아니고 변수를 갖고 있다가 화면이 렌더링될때 한번에 바뀐다(렌더링을 state변수에 걸었으므로 state변수를 렌더링할 때 변함)
+        //2+폼태그를 갖고올 때 주로 사용함
+    }
 
     useEffect(()=>{
         console.log('stCnt2=',stCnt)
