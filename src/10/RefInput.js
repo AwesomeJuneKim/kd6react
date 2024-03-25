@@ -1,17 +1,28 @@
 import TailInput from "../ui/TailInput"
 import TailButton from "../ui/TailButton"
-import {useRef} from "react"
+import {useEffect, useRef, useState} from "react"
 export default function RefInput() {
     const inputRef=useRef();
+    const [bts, setBts]=useState([]);//입력값을 배열에 저장하고 버튼으로 만들어 줌
+    const[tags, setTags]=useState([]);//만들어진 버튼을 출력 함
 
     const handleAdd=()=>{
         if(inputRef.current.value ===''){
             alert('값을 입력해주세요.');
             inputRef.current.focus();
+            return;
         }
-        console.log(inputRef.current.value)//input박스에는 value값을 가져올 수 있다.
+        console.log(inputRef.current.value)//input박스에는 ref의 value값을 가져올 수 있다.
+        setBts([...bts, inputRef.current.value]);
     }
     const handleRemove=()=>{}
+    useEffect(()=>{
+        inputRef.current.value='';
+        inputRef.current.focus();
+        let tm=bts.map((item,idx)=>
+        <TailButton caption={item} key={`bt${idx}`} color="red"/>)
+        setTags(tm);
+    },[bts]);
   return (
     <div className="w-11/12 flex flex-col
                     justify-center items-center">
@@ -39,6 +50,7 @@ export default function RefInput() {
         <TailButton caption="취소" color="red" handleClick={handleRemove}/>
         </div>
         </div>
+        <div>{tags}</div>
     </div>
   )
 }
