@@ -15,7 +15,10 @@ export default function RefInput() {
         console.log(inputRef.current.value)//input박스에는 ref의 value값을 가져올 수 있다.
         setBts([...bts, inputRef.current.value]);
     }
-    const handleRemove=()=>{}
+    const handleRemove=()=>{
+        setBts([]);
+        inputRef.current.focus();
+    }
     useEffect(()=>{
         inputRef.current.value='';
         inputRef.current.focus();
@@ -47,7 +50,7 @@ export default function RefInput() {
         
         <div className="w-1/2 flex justify-center items-center">
         <TailButton caption="등록" color="blue" handleClick={handleAdd}/>
-        <TailButton caption="취소" color="red" handleClick={handleRemove}/>
+        <TailButton caption="삭제" color="red" handleClick={handleRemove}/>
         </div>
         </div>
         <div>{tags}</div>
