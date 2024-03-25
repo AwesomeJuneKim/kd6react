@@ -1,9 +1,9 @@
 
-export default function TailInput({type, ph, ref}) {
+export default function TailInput({type, ph, inputRef}) {
   return (
     <div>
       <input type={type}
-                ref={ref}
+                ref={inputRef}
                 id="first_name"
                 className="border border-gray-300
                         bg-gray-50 

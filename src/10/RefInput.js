@@ -33,7 +33,7 @@ export default function RefInput() {
                         justify-center items-center">
         <div className="w-1/2 flex justify-center items-center">
         <div>
-      <input type="text"
+      {/* <input type="text"
                 ref={inputRef}
                 id="first_name"
                 className="border border-gray-300
@@ -44,7 +44,10 @@ export default function RefInput() {
                         focus:ring-blue-500
                         focus:border-blue-500
                         block w-full p-2.5"
-                        placeholder="값 입력"/>
+                        placeholder="값 입력"/> */}
+        <TailInput type="text"
+                    inputRef={inputRef}
+                    ph="값 입력"/>
     </div>
         </div>
         
