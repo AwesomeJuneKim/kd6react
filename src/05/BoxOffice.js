@@ -6,7 +6,7 @@ import TailInput from'../ui/TailInput';
 
 export default function BoxOffice() {
     const boxRef=useRef();
-    const [boxlist,setBoxlist]=useState();
+    const [boxlist,setBoxlist]=useState();//박스오피스 json데이터 저장
     const [trs,setTrs]=useState();
     const [Mcontent,setMcontent]= useState();
     const handleClick=(mv)=>{
