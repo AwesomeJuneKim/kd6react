@@ -26,6 +26,7 @@ export default function RefInput() {
         <TailButton caption={item} key={`bt${idx}`} color="red"/>)
         setTags(tm);
     },[bts]);
+    
   return (
     <div className="w-11/12 flex flex-col
                     justify-center items-center">

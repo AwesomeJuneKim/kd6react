@@ -1,5 +1,5 @@
 
-export default function TailInput({type, ph, inputRef}) {
+export default function TailInput({type, ph, inputRef, handleChange}) {
   return (
     <div>
       <input type={type}
@@ -13,7 +13,8 @@ export default function TailInput({type, ph, inputRef}) {
                         focus:ring-blue-500
                         focus:border-blue-500
                         block w-full p-2.5"
-                        placeholder={ph}/>
+                placeholder={ph}
+                onChange={handleChange}/>
     </div>
   )
 }
