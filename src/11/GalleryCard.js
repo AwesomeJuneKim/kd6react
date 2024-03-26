@@ -1,11 +1,13 @@
 import TailButton from '../ui/TailButton';
 import { useEffect, useState } from 'react';
-export default function GalleryCard({imgUrl,title,ptitle,ktag}) {//1+프롭스로 사용하고자하는 상수를 매개변수로 지정하면
+export default function GalleryCard({imgUrl,title,ptitle,ktag}) {
+    //1+메인에서 호출되기 위해서프롭스로 사용하고자하는 상수를 매개변수로 지정하면
+
     //다른데이터를 넣을 수 있도록 상수를 정해준다.(gdata.~를 넣으면 주소 바뀔때마다 전체 다 바꿔야 함)
     // const imgUrl=gdata.galWebImageUrl
     // const title=gdata.galTitle
     // const ptitle=gdata.galPhotographyLocation
-    // const ktag=gdata.galSearchKeyword//매개변수로 전달되는 상수를 정의할 필요가 없다.
+    // const ktag=gdata.galSearchKeyword//1+매개변수로 전달되는 상수를 정의할 필요가 없다.
 
     const [tags, setTags]=useState([]);
     const [sm, setSm]=useState([]);
@@ -16,8 +18,8 @@ export default function GalleryCard({imgUrl,title,ptitle,ktag}) {//1+프롭스�
     },[])
     useEffect(()=>{
         if(tags.length > 0){//배열로 만들어진 tags에 데이터가 있는경우에
-            let tm=tags.map(item=>//tags안에 있는 데이터를 tailbutton으로 표현한다.
-                <TailButton caption={item} color="gray"/>)
+            let tm=tags.map((item,idx)=>//tags안에 있는 데이터를 tailbutton으로 표현한다.
+                <TailButton caption={item} key={idx} color="gray"/>)
                 setSm(tm);
         }
     },[tags])
