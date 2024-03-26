@@ -30,7 +30,7 @@ export default function GalleryCard({imgUrl,title,ptitle,ktag}) {
             <div>
                 <h1 className='text-xl font-bold pt-2 pl-1'>{title}</h1>
                 <h3 className='p-1 pl-2'>{ptitle}</h3>
-                <div className='p-2 text-sm font-semibold'>{sm}</div>
+                <div className='grid grid-cols-3 p-2 text-sm font-semibold'>{sm}</div>
             </div>
         </div>
     </div>
