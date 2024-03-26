@@ -18,7 +18,8 @@ import { ImAppleinc } from "react-icons/im";
 // import TrafficMain from "./09/TrafficMain";
 // import RefVal from "./10/RefVal";
 // import RefInput from "./10/RefInput";
-import BoxOffice from "./05/BoxOffice";
+// import BoxOffice from "./05/BoxOffice";
+import GalleryCard from "./11/GalleryCard";
 
 function App() {
   return (
@@ -51,7 +52,7 @@ function App() {
           {/* <MyListMain /> */}
           {/* <Practice1 /> */}
           {/* <BoxOfficeTb /> */}
-          <BoxOffice/>
+          {/* <BoxOffice/> */}
           {/* <BoxOfficeMain/> */}
           {/* <Lotto /> */}
           {/* <Like /> */}
@@ -60,6 +61,7 @@ function App() {
           {/* <TrafficMain/> */}
           {/* <RefVal/> */}
           {/* <RefInput/> */}
+          <GalleryCard />
           </main>
         <footer className="flex justify-center items-center
                           h-20
