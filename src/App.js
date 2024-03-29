@@ -20,7 +20,8 @@ import { ImAppleinc } from "react-icons/im";
 // import RefInput from "./10/RefInput";
 // import BoxOffice from "./05/BoxOffice";
 // import GalleryCard from "./11/GalleryCard";
-import GalleryMain from "./11/GalleryMain";
+// import GalleryMain from "./11/GalleryMain";
+import FestivalMain from "./11/FestivalMain";
 
 function App() {
   return (
@@ -63,7 +64,8 @@ function App() {
           {/* <RefVal/> */}
           {/* <RefInput/> */}
           {/* <GalleryCard /> */}
-          <GalleryMain/>
+          {/* <GalleryMain/> */}
+          <FestivalMain/>
           </main>
         <footer className="flex justify-center items-center
                           h-20
