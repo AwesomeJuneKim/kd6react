@@ -43,10 +43,12 @@ export default function FestivalMain() {
         let gucard=Tdata.filter(item=>item.GUGUN_NM===selRef.current.value)
         let gudisplay=gucard.map(item=>
             <GalleryCard imgUrl={item.MAIN_IMG_THUMB}
-                        title={item.MAIN_TITLE}
-                        ptitle={item.TITLE}
-                        ktag={item.TRFC_INFO}
-                        />)
+                        title={item.TITLE}
+                        ptitle={item.SUBTITLE}
+                        key={item.UC_SEQ}
+                        content={item.TRFC_INFO}
+                        />
+                        )
         setGcard(gudisplay);
         // console.log(gucard)
     };
@@ -54,17 +56,17 @@ export default function FestivalMain() {
   return (
     <div className="w-full h-full flex flex-col justify-start items-center">
         
-        <form className="w-3/5 mx-auto mt-10">
-            <label htmlFor="gu" className="w-1/3 mb-2 text-sm font-bold text-gray-900 p-2">부산축제 구 선택</label>
+        <form className="flex justify-center items-center w-11/12 mx-auto mt-10">
+            <label htmlFor="gu" className="w-1/3 mb-2 text-2xl font-bold text-gray-900 p-2">부산축제 구 선택</label>
             <select id="gu" 
                     onChange={handleSelGu}
                     ref={selRef}
-                    className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-2">
+                    className=" bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-2">
             <option defaultValue>구 선택</option>
             {opTags}
             </select>
         </form>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="w-11/12 grid grid-cols-2 md:grid-cols-3 gap-4">
         {Gcard}
         </div>
     </div>

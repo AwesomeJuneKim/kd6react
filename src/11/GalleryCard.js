@@ -1,6 +1,7 @@
 
-export default function GalleryCard({imgUrl,title,ptitle, ktag}) {
-    if (ktag.includes(',')) {
+export default function GalleryCard({imgUrl,title,ptitle,ktag,content}) {
+    if(ktag===undefined) ktag=''
+    else if (ktag.includes(',')) {
       ktag = ktag.split(',').map(item =>
         <span key={item}
           className="inline-block bg-gray-200 
@@ -34,9 +35,10 @@ export default function GalleryCard({imgUrl,title,ptitle, ktag}) {
           {ptitle}
         </p>
       </div>
-      <div className="px-6 pt-4 pb-2">
+      {ktag !='' && <div className="px-6 pt-4 pb-2">
         {ktag}
-      </div>
+      </div>}
+      <div className="m-2 p-2 bg-indigo-200 text-white rounded-lg">{content}</div>
     </div>
   )
   }
