@@ -11,7 +11,7 @@ import { ImAppleinc } from "react-icons/im";
 // import BoxOfficeTb from "./05_1/BoxOfficeTb";
 // import BoxOfficeMain from "./05/BoxOfficeMain";
 // import Like from "./practice/Like";
-import Lotto from "./06/Lotto";
+// import Lotto from "./06/Lotto";
 // import FoodCard from "./07/FoodCard";
 // import MyClock from "./08/MyClock";
 // import FoodMain from "./07/FoodMain";
@@ -21,7 +21,7 @@ import Lotto from "./06/Lotto";
 // import BoxOffice from "./05/BoxOffice";
 // import GalleryCard from "./11/GalleryCard";
 // import GalleryMain from "./11/GalleryMain";
-// import FestivalMain from "./11/FestivalMain";
+import FestivalMain from "./11/FestivalMain";
 
 function App() {
   return (
@@ -56,7 +56,7 @@ function App() {
           {/* <BoxOfficeTb /> */}
           {/* <BoxOffice/> */}
           {/* <BoxOfficeMain/> */}
-          <Lotto />
+          {/* <Lotto /> */}
           {/* <Like /> */}
           {/* <FoodCard /> */}
           {/* <MyClock /> */}
@@ -65,7 +65,7 @@ function App() {
           {/* <RefInput/> */}
           {/* <GalleryCard /> */}
           {/* <GalleryMain/> */}
-          {/* <FestivalMain/> */}
+          <FestivalMain/>
           </main>
         <footer className="flex justify-center items-center
                           h-20

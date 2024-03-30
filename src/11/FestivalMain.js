@@ -17,7 +17,7 @@ export default function FestivalMain() {
         let url=`https://apis.data.go.kr/6260000/FestivalService/getFestivalKr?`
         url=`${url}serviceKey=${process.env.REACT_APP_APIKEY}`
         url=`${url}&pageNo=1&numOfRows=40&resultType=json`
-        // console.log(url)
+        console.log(url)
 
         getDataFetch(url);
     },[]);
