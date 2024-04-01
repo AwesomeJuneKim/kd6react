@@ -1,4 +1,4 @@
-
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import './App.css';
 // import MainHeader from './01/MainHeader';
 // import Hello from './01/Hello';
@@ -11,21 +11,24 @@ import { ImAppleinc } from "react-icons/im";
 // import BoxOfficeTb from "./05_1/BoxOfficeTb";
 // import BoxOfficeMain from "./05/BoxOfficeMain";
 // import Like from "./practice/Like";
-// import Lotto from "./06/Lotto";
+import Lotto from "./06/Lotto";
 // import FoodCard from "./07/FoodCard";
-// import MyClock from "./08/MyClock";
-// import FoodMain from "./07/FoodMain";
+import MyClock from "./08/MyClock";
+import FoodMain from "./07/FoodMain";
 // import TrafficMain from "./09/TrafficMain";
 // import RefVal from "./10/RefVal";
 // import RefInput from "./10/RefInput";
-// import BoxOffice from "./05/BoxOffice";
+import BoxOffice from "./05/BoxOffice";
 // import GalleryCard from "./11/GalleryCard";
-// import GalleryMain from "./11/GalleryMain";
+import GalleryMain from "./11/GalleryMain";
 import FestivalMain from "./11/FestivalMain";
+// import RouteMain from "./13/RouteMain";
+import Frcst from "./14/Frcst";
 
 function App() {
   return (
     <>
+    <BrowserRouter>
       <div className="flex flex-col 
                       w-full max-w-screen-xl
                       h-screen
@@ -46,7 +49,30 @@ function App() {
                           bg-[#6ABEA7]
                           scroll-auto">
           <div>리액트 실습</div>
-          <div className='text-5xl text-green-950'><ImAppleinc /></div>
+          <div className="flex justify-end items-center">
+          <div className="p-2 hover:text-green-950 m-2">
+              <Link to="/boxoffice">Movie</Link>
+            </div>
+          <div className="p-2 hover:text-green-950 m-2">
+              <Link to="/lotto">Lotto</Link>
+            </div>
+          <div className="p-2 hover:text-green-950 m-2">
+              <Link to="/gallery">Gallery</Link>
+            </div>
+          <div className="p-2 hover:text-green-950 m-2">
+              <Link to="/festival">Festival</Link>
+            </div>
+          <div className="p-2 hover:text-green-950 m-2">
+              <Link to="/foodmarket">FoodMarket</Link>
+            </div>
+          <div className="p-2 hover:text-green-950 m-2">
+              <Link to="/forecast">Forecast</Link>
+            </div>
+            
+            <div className='pl-2 text-5xl text-green-950 hover:text-white'>
+              <Link to="/"><ImAppleinc /></Link>
+          </div>
+          </div>
           </header>
         <main className="grow flex flex-col justify-center items-center">
           {/* <HelloCss /> */}
@@ -65,7 +91,17 @@ function App() {
           {/* <RefInput/> */}
           {/* <GalleryCard /> */}
           {/* <GalleryMain/> */}
-          <FestivalMain/>
+          {/* <FestivalMain/> */}
+          {/* <RouteMain/> */}
+          <Routes>
+            <Route path="/" element={<MyClock/>} />
+            <Route path="/lotto" element={<Lotto/>} />
+            <Route path="/boxoffice" element={<BoxOffice/>} />
+            <Route path="/foodmarket" element={<FoodMain/>} />
+            <Route path="/festival" element={<FestivalMain/>} />
+            <Route path="/gallery" element={<GalleryMain/>} />
+            <Route path="/forecast" element={<Frcst/>} />
+          </Routes>
           </main>
         <footer className="flex justify-center items-center
                           h-20
@@ -76,7 +112,7 @@ function App() {
           </footer>
           
       </div>
-
+      </BrowserRouter>
     </>
   );
 }
