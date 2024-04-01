@@ -10,14 +10,23 @@ export default function GalleryMain() {
     const [trdata, setTrdata] = useState(); // 'useState'를 정의
     const[tags,setTags] = useState();
 
-    const getDataFetch = (url) => {
+    const getDataFetch = () => {
+        if (!keyword.current.value || keyword.current.value==='' ) return ;
+        console.log("k",encodeURI(keyword.current.value) )
+        
+        let url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?`
+        url += `serviceKey=${process.env.REACT_APP_APIKEY}`
+        url += `&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A`
+        url += `&keyword=${encodeURI(keyword.current.value)}&_type=json`
+        console.log(url)
+
         fetch(url)
-        .then(data => data.json())
+        .then(reps => reps.json())
         .then(data => setTrdata(data.response.body.items.item))
         .catch(err => console.log(err))
     }
 
-    // const handleFetch = () => {
+    // const handleFetch = () => {  
     //     console.log(keyword.current.value)
     // };
 
@@ -28,13 +37,8 @@ export default function GalleryMain() {
         keyword.current.focus();
     };
 
-    useEffect(() => {
-        let url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?`
-        url += `serviceKey=${process.env.REACT_APP_APIKEY}`
-        url += `&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A`
-        url += `&keyword=${encodeURI(keyword.current.value)}&_type=json`
-        console.log(url)
-        getDataFetch(url)
+    useEffect(() => { 
+
     }, [keyword]);
     useEffect(()=>{
         if(!trdata) return;
