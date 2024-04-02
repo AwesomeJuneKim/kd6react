@@ -17,6 +17,21 @@ export default function UltraSrtRcst() {
     // console.log(dt, area, x, y);
     const [ultra, setUltra]=useState([]);
     const [ulcard, setUlcard]=useState([]);//초기값을 배열로주면 map에 들어가는 데이터가 없어도 오류가 발생하지 않는다.
+    useEffect(()=>{
+        let url=`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst?`
+        url=`${url}serviceKey=${process.env.REACT_APP_APIKEY}`
+        url=`${url}&pageNo=1&numOfRows=1000&dataType=json&base_date=${dt}&base_time=0630&nx=${x}&ny=${y}`
+        console.log(url)
+        
+        fetch(url)
+        .then(resp=>resp.json())
+        .then(data=>setUltra(data.response.body.items.item))//실수한 곳
+        .catch(err=>console.log(err))
+        
+    },[]);
+    // const getData=async(url)=>{
+        
+        // }
     const handleItem=()=>{
         if(itemRef.current.value==''){
             alert('항목을 선택해 주세요.')
@@ -27,21 +42,6 @@ export default function UltraSrtRcst() {
         setSelitemNm(itemRef.current.value.split('(')[0])
         selectitem(itemRef.current.value.split('(')[1].replace(')',''))
     }
-    useEffect(()=>{
-        let url=`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst?`
-        url=`${url}serviceKey=${process.env.REACT_APP_APIKEY}`
-        url=`${url}&pageNo=1&numOfRows=1000&dataType=json&base_date=${dt}&base_time=0630&nx=${x}&ny=${y}`
-        console.log(url)
-
-        fetch(url)
-        .then(resp=>resp.json())
-        .then(data=>setUltra(data.response.body.items.item))//실수한 곳
-        .catch(err=>console.log(err))
-
-    },[]);
-    // const getData=async(url)=>{
-
-    // }
     useEffect(()=>{
         if (!selitem) return;
         const tm=ultra.filter(item=>item.category===selitem)
