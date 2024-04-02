@@ -49,7 +49,7 @@ export default function GalleryMain() {
     },[trdata]);
     return (
         <div className="w-11/12 flex flex-col h-full justify-start items-center mt-5">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-[#F0F8FF] p-3 pr-7">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-3 pr-7">
                 <div className="p-2">
                     <TailInput type="text"
                                 inputRef={keyword}
@@ -66,7 +66,7 @@ export default function GalleryMain() {
                                 handleClick={handleClear} />
                 </div>
             </div>
-            <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-4 bg-[#F0F8FF] p-3 pr-7'>{tags}</div>
+            <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-4 p-3 pr-7'>{tags}</div>
         </div>
     )
 }

@@ -46,7 +46,7 @@ export default function FestivalMain() {
                         title={item.TITLE}
                         ptitle={item.SUBTITLE}
                         key={item.UC_SEQ}
-                        content={item.TRFC_INFO}
+                        ktag={item.PLACE}
                         />
                         )
         setGcard(gudisplay);
