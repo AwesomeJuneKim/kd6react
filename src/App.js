@@ -26,6 +26,7 @@ import FestivalMain from "./11/FestivalMain";
 import Frcst from "./14/Frcst";
 import UltraSrtRcst from "./14/UltraSrtRcst";
 import VilageFrcst from "./14/VilageFrcst";
+import FrcstList from "./14/FrcstList";
 
 function App() {
   return (
@@ -105,6 +106,7 @@ function App() {
             <Route path="/forecast" element={<Frcst/>} />
             <Route path="/ultra/:dt/:area/:x/:y" element={<UltraSrtRcst/>} />
             <Route path="/vilage/:dt/:area/:x/:y" element={<VilageFrcst/>} />
+            <Route path="/flist/" element={<FrcstList/>}/>
           </Routes>
           </main>
         <footer className="flex justify-center items-center

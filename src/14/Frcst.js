@@ -36,7 +36,7 @@ export default function Frcst() {
         console.log({y})
     },[sRef]);
     //초단기예보, navigate를 이용한다
-    const handleFrcst=({loc})=>{
+    const handleFrcst=(loc)=>{
         if(dt===''||dt===undefined){
             alert('날짜를 선택해주세요.')
             dRef.current.focus();
@@ -47,7 +47,11 @@ export default function Frcst() {
             dRef.current.focus();
             return
         }
-        navigator(`/${loc}/${dt}/${area}/${x}/${y}`)//헷갈리는 부분
+        // navigator(`/${loc}/${dt}/${area}/${x}/${y}`)//헷갈리는 부분
+        let gubun='';
+        if (loc==='ultra') gubun='초단기예보'
+        else gubun='단기예보'
+        navigator(`/flist?dt=${dt}&area=${area}&x=${x}&y=${y}&gubun=${gubun}`)//쿼리스트링으로 바꿔서 전달
     }
 
   return (
