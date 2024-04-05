@@ -27,6 +27,7 @@ import Frcst from "./14/Frcst";
 import UltraSrtRcst from "./14/UltraSrtRcst";
 import VilageFrcst from "./14/VilageFrcst";
 import FrcstList from "./14/FrcstList";
+import Recoil from "./15/Recoil";
 
 function App() {
   return (
@@ -71,6 +72,9 @@ function App() {
           <div className="p-2 hover:text-green-950 m-2">
               <Link to="/forecast">Forecast</Link>
             </div>
+          <div className="p-2 hover:text-green-950 m-2">
+              <Link to="/recoil">Recoil</Link>
+            </div>
             
             <div className='pl-2 text-5xl text-green-950 hover:text-white'>
               <Link to="/"><ImAppleinc /></Link>
@@ -107,6 +111,7 @@ function App() {
             <Route path="/ultra/:dt/:area/:x/:y" element={<UltraSrtRcst/>} />
             <Route path="/vilage/:dt/:area/:x/:y" element={<VilageFrcst/>} />
             <Route path="/flist/" element={<FrcstList/>}/>
+            <Route path="/recoil/" element={<Recoil/>}/>
           </Routes>
           </main>
         <footer className="flex justify-center items-center
