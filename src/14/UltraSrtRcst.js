@@ -8,7 +8,7 @@ export default function UltraSrtRcst() {
     const x=useParams().x;
     const y=useParams().y;
     const itemRef=useRef();
-    const[selitem,selectitem]=useState()
+    const[selitem,setSelitem]=useState()
     const [selitemNm,setSelitemNm] =useState()
 
     const gubun='초단기예보'
@@ -40,7 +40,7 @@ export default function UltraSrtRcst() {
         }
         console.log(itemRef.current.value)
         setSelitemNm(itemRef.current.value.split('(')[0])
-        selectitem(itemRef.current.value.split('(')[1].replace(')',''))
+        setSelitem(itemRef.current.value.split('(')[1].replace(')',''))
     }
     useEffect(()=>{
         if (!selitem) return;
