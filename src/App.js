@@ -27,7 +27,7 @@ import Frcst from "./14/Frcst";
 import UltraSrtRcst from "./14/UltraSrtRcst";
 import VilageFrcst from "./14/VilageFrcst";
 import FrcstList from "./14/FrcstList";
-import Recoil from "./15/Recoil";
+import RecoilMain from "./15/RecoilMain";
 
 function App() {
   return (
@@ -111,7 +111,7 @@ function App() {
             <Route path="/ultra/:dt/:area/:x/:y" element={<UltraSrtRcst/>} />
             <Route path="/vilage/:dt/:area/:x/:y" element={<VilageFrcst/>} />
             <Route path="/flist/" element={<FrcstList/>}/>
-            <Route path="/recoil/" element={<Recoil/>}/>
+            <Route path="/recoil/" element={<RecoilMain/>}/>
           </Routes>
           </main>
         <footer className="flex justify-center items-center

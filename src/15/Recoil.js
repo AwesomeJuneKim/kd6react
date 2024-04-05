@@ -1,16 +1,14 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import Recoil2 from './Recoil2'
+import { useRecoilValue } from 'recoil'
+import { rcnt } from './RecoilAtom'
 
 export default function Recoil() {
-    const [cnt,setCnt]=useState(0)//틀린부분
-    useEffect(()=>{
-        console.log(cnt)
-    },[cnt])
+    const cnt=useRecoilValue(rcnt);
   return (
     <div className='w-ful h-full flex flex-col justify-center items-center text-lg font-bold'>
       Recoil1: {cnt}
-      <Recoil2 cnt={cnt} setCnt={setCnt}/>
+      <Recoil2 />
     </div>
   )
 }
