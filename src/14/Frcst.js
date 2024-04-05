@@ -36,7 +36,7 @@ export default function Frcst() {
         console.log({y})
     },[sRef]);
     //초단기예보, navigate를 이용한다
-    const handleUltra=()=>{
+    const handleFrcst=({loc})=>{
         if(dt===''||dt===undefined){
             alert('날짜를 선택해주세요.')
             dRef.current.focus();
@@ -47,7 +47,7 @@ export default function Frcst() {
             dRef.current.focus();
             return
         }
-        navigator(`/ultra/${dt}/${area}/${x}/${y}`)//헷갈리는 부분
+        navigator(`/${loc}/${dt}/${area}/${x}/${y}`)//헷갈리는 부분
     }
 
   return (
@@ -67,11 +67,12 @@ export default function Frcst() {
         <div>
             <TailButton caption="초단기예보"
                         color="blue"
-                        handleClick={handleUltra}/>
+                        handleClick={()=>{handleFrcst('ultra')}}/>
         </div>
         <div>
             <TailButton caption="단기예보"
-                        color="blue"/>
+                        color="blue"
+                        handleClick={()=>{handleFrcst('vilage')}}/>
                         </div>
     </div>
   )
