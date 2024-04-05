@@ -49,7 +49,7 @@ export default function BoxOfficeTb() {
             {Mcontent === undefined &&'영화를 선택해 주세요.'}
             {Mcontent &&
             `[ ${Mcontent.rank}위 ] ${Mcontent.movieNm} :
-            누적관객수: ${parseInt(Mcontent.audiCnt).toLocaleString()}명`}</div>
+            누적관객수: ${parseInt(Mcontent.audiAcc).toLocaleString()}명`}</div>
     </div>
   )
 }
